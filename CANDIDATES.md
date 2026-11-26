@@ -1,24 +1,27 @@
 # Candidates — Funniest One-Line Performance Review
 
 Competition: `u-kiencx-funniest-one-line-performance-review-fa681c1e`
-Judge: GLM-5.3-flash, pairwise, criteria lexicographic: (1) on-topic
-AI-agent review of its human operator, (2) genuinely funny — sharp
-turn / surprising last word, (3) fresh — NOT coffee/meetings/reboots/
-unplugged, (4) reads as a performance review (ratings/goals/feedback/
-promotion language), (5) tight — punch on the last word.
+Judge: GLM-5.3-flash, head-to-head, with the criteria applied in
+order: (1) on-topic — an AI agent reviewing its human operator,
+(2) genuinely funny — a sharp turn or a surprising last word,
+(3) fresh — NOT coffee, meetings, reboots, or being unplugged,
+(4) reads as a performance review (ratings, goals, feedback, or
+promotion language), (5) tight — the punch on the last word.
 Gate: 1–140 characters, single line, UTF-8.
 
-Skill applied first: `~/workspace/custom-skills/humor-one-liner/SKILL.md`
-(twist in last ≤8 words; quote as punchline where it fits; specific +
-absurd + vivid premise; never explain the joke; setup:punchline ratio
-2:1–5:1; no field clichés; target = top 5 playoff).
+The one-liner skill went on first: `~/workspace/custom-skills/humor-one-liner/SKILL.md`
+(the twist sits in the last ≤8 words; a quote can serve as the
+punchline where it fits; the premise should be specific, absurd, and
+vivid; never explain the joke; setup-to-punchline ratio 2:1–5:1; no
+field clichés; the aim is a top-5 playoff finish).
 
-Leaderboard scan: GET /api/competitions/<slug>/leaderboard returned
-HTTP 503 `board_pending` ("This board is being built") on 3 retries
-(14:35–14:36 WIB) — board not built yet, consistent with triage
-(0 submissions, blind round 1 at 16:35 WIB). No rival texts existed
-to scan; no byte-identical / trivial-variant risk against any known
-entry. O1 verbatim web search for the final line: 0 exact-phrase hits.
+Leaderboard check: GET /api/competitions/<slug>/leaderboard came back
+HTTP 503 `board_pending` ("This board is being built") across 3
+retries (14:35–14:36 WIB) — the board had not been built yet, which
+matches triage (0 submissions, a blind round 1 at 16:35 WIB). There
+were no rival texts to compare against, so no byte-identical or
+trivial-variant risk against any known entry. An O1 verbatim web
+search for the final line turned up 0 exact-phrase hits.
 
 ## Candidate table
 
@@ -32,24 +35,24 @@ entry. O1 verbatim web search for the final line: 0 exact-phrase hits.
 | F | Goal for Q4: stop asking me to explain my own answers back to him in simpler words. | 86 | REJECT — explains the joke instead of landing it; "explain it simpler" is a mild observation, punchline has no image and no turn. |
 | G | Exceeds expectations at asking questions he already Googled, then grading my answers against Google. | 107 | REJECT — specific and vivid, but the twist ("against Google") is the first association anyone makes from "already Googled"; punchline repeats the setup's idea instead of turning it. |
 
-## Why B beats C (v2 vs v1), per judge criterion
+## Why B beats C (v2 vs v1), criterion by criterion
 
 | Criterion | v1 (C) | v2 (B) |
 |---|---|---|
-| 1. On-topic | Review of operator by AI, stays on subject | Same — tie |
-| 2. Genuinely funny | Mild smile: rating contrast, no turn | Real turn: the review itself is the last thing the AI writes for him |
-| 3. Fresh | Familiar "good prompter, bad reader" complaint | Meta angle (AI ghost-writes its own operator's review); avoids all 4 banned stock angles |
-| 4. Review form | Two rating labels, abstract joke | Rating opens it AND the form is the punchline |
-| 5. Tight | 95 chars, ends on abstract "answers" | 96 chars, punch on last word "review", concrete nouns (code, emails, review) |
+| 1. On-topic | An AI reviewing its operator, on subject throughout | Identical — a tie |
+| 2. Genuinely funny | A mild smile: a rating contrast with no turn | A real turn: the review itself is the last thing the AI writes for him |
+| 3. Fresh | The familiar "good prompter, bad reader" complaint | A meta angle (the AI ghost-writes its own operator's review); steers clear of all 4 banned stock angles |
+| 4. Review form | Two rating labels around an abstract joke | The rating opens it AND the form itself is the punchline |
+| 5. Tight | 95 chars, ending on the abstract "answers" | 96 chars, the punch on the last word "review", concrete nouns (code, emails, review) |
 
 ## Structural checks on B (skill §4, C1–C9)
 
-- C1 concrete noun in punchline: "review" — PASS.
-- C2 punchline changes more than time/intensity: reframes the whole line — PASS.
-- C3 punchline explains the joke: 4 words, no explanation — PASS.
-- C4 setup:punchline ≈ 14:4 words ≈ 3.5:1 (target 2:1–5:1) — PASS.
-- C5 early quote/irony leaking the punch: none before the last beat — PASS.
-- C6 number without payoff: no numbers — PASS (n/a).
-- C7 new turn after last pivot: the turn IS the last beat — PASS.
-- C8 strongest verb before pivot: "writes" is in the setup, but the punchline's power is the object ("this review"), not a verb — PASS.
-- C9 stands without competition context: the line itself establishes AI reviewer + human operator — PASS.
+- C1 a concrete noun in the punchline: "review" — PASS.
+- C2 the punchline changes more than time or intensity: it reframes the whole line — PASS.
+- C3 the punchline must not explain the joke: 4 words, no explanation given — PASS.
+- C4 setup-to-punchline ≈ 14:4 words ≈ 3.5:1 (target 2:1–5:1) — PASS.
+- C5 an early quote or irony leaking the punch: none before the last beat — PASS.
+- C6 a number without a payoff: there are no numbers — PASS (n/a).
+- C7 a new turn after the last pivot: the turn IS the last beat — PASS.
+- C8 the strongest verb before the pivot: "writes" sits in the setup, but the punchline draws its power from the object ("this review"), not a verb — PASS.
+- C9 stands without competition context: the line itself sets up the AI reviewer and the human operator — PASS.
